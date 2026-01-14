@@ -34,7 +34,7 @@ def home():
     return render_template("index.html")
 
 # API for form submit
-@app.route('/contact', methods=['POST'])
+@app.route('/api/contact', methods=['POST'])
 def save_contact():
     try:
         data = request.get_json()
@@ -65,4 +65,5 @@ def save_contact():
 # Run App
 # -----------------------
 if __name__ == '__main__':
+
     app.run(debug=True)
